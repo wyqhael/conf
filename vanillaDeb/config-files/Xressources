@@ -1,0 +1,34 @@
+URxvt*termName: rxvt-unicode
+
+URxvt*geometry: 74x27
+
+!! Term background colors
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0000/ef00
+URxvt*foreground: #ffffff
+
+!! Term transparency
+URxvt*transparent: true
+URxvt*shading: 20
+
+!! Fonts used
+URxvt*font: xft:DejaVu Sans Mono:size=13
+URxvt*boldFont: xft:DejaVu Sans Mono:size=13:weight=bold
+URxvt*letterSpace: -1
+
+URxvt*scrollBar: false
+
+!! Copy / Paste
+URxvt.iso14755: false
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+
+!! Scrolling Up / Down
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+
+URxvt*saveLines: 10000

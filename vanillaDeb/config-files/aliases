@@ -1,0 +1,128 @@
+####################
+### config files ###
+####################
+alias bas='vim ~/.bashrc'
+alias sbash='source ~/.bashrc'
+alias ali='vim ~/.aliases'
+alias xre='vim ~/.Xresources'
+alias sxre='xrdb ~/.Xresources'
+alias iconf='vim ~/.i3/config'
+
+
+
+##########
+### cd ###
+##########
+alias b='cd ..'
+alias doc='cd ~/Documents/'
+alias dl='cd ~/Downloads/'
+alias pic='cd ~/Pictures/'
+alias bok='cd ~/Books/'
+alias gi='cd ~/Git/'
+
+
+
+##########
+### ls ###
+##########
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -l'
+alias lsa='ls -all'
+alias lsd='ls -d .*'
+alias sl='ls'
+alias ld='ls'
+
+
+
+##########
+### cp ###
+##########
+alias cpr='cp -r'
+
+
+
+##########
+### rm ###
+##########
+alias rmall='rm -rf ./*'
+alias eff='rm -rf'
+
+
+
+###########
+### git ###
+###########
+alias gstat='git status'
+
+
+
+################
+### updatedb ###
+################
+alias up='sudo updatedb'
+
+
+
+#############
+### chmod ###
+#############
+alias x='chmod +x'
+
+
+
+#################
+### systemctl ###
+#################
+alias start='systemctl start'
+alias stop='systemctl stop'
+alias res='systemctl restart'
+
+
+
+############
+### make ###
+############
+alias m='make'
+alias mc='make clean'
+alias cm='cmake ..'
+
+
+
+##########
+### ps ###
+##########
+alias task='ps aux | grep'
+
+
+
+##########
+### ip ###
+##########
+alias ipa='ip a'
+alias ipr='ip r'
+
+
+
+#############
+### clear ###
+#############
+alias cl='clear'
+
+
+
+###############
+### history ###
+###############
+alias hist='history | grep'
+
+
+
+#############
+### other ###
+#############
+alias rb='reboot'
+alias sh='shutdown 0'
+alias python='/usr/bin/python3'
+alias pip='pip3'
+alias typora='/usr/bin/typora'

@@ -1,0 +1,22 @@
+#!/bin/bash
+hour=$(date +%H:%M)
+day=$(date +%d/%m/%Y)
+content=$(echo "$day $hour")
+
+commitfile=whatsinmycommit
+
+if [ -z "../$commitfile" ]
+then
+	touch ../$commitfile
+else
+	> ../$commitfile
+fi
+
+
+git status -s > ../$commitfile
+
+git commit -m "$content : $(cat ../$commitfile | tail -1)"
+
+git push
+
+rm ../$commitfile

@@ -1,0 +1,42 @@
+#!/bin/bash
+
+## username
+user=test
+
+## basic config
+echo -e "Copying .bashrc, .bash_aliases, i3 config file and .Xresources\n"
+cp ./config-files/config /home/$user/.config/i3/
+cp ./config-files/aliases /home/$user/.aliases 
+cp ./config-files/bashrc /home/$user/.bashrc 
+cp ./config-files/Xresources /home/$user/.Xressources
+
+source /home/$user/.bashrc
+
+## git directory
+if [ ! -d "/home/$user/Git" ]; then
+	echo "Creating git directory"
+	mkdir /home/$user/Git
+fi
+
+## cron
+echo -e "Installing scripts\n"
+cp ./scripts/* /bin/
+
+## cron
+echo -e "Adding cron tasks\n"
+cp ./cron/*.hourly /etc/cron.hourly
+cp ./cron/*.daily /etc/cron.daily
+
+## packages
+echo -e "Installing additionnal packages\n"
+xargs -a ./packages.txt sudo apt-get install
+
+## wallpaper
+if [ ! -d "/home/$user/.wallpapers" ]; then
+	echo "Creating a wallpaper directory"
+	mkdir /home/$user/.wallpapers
+fi
+cp ./wallpaper.* /home/$user/.wallpapers/
+
+
+echo "End of the installation"

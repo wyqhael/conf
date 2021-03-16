@@ -1,0 +1,4 @@
+rxvt-unicode
+feh
+flameshot
+lsof
